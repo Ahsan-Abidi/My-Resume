@@ -5,120 +5,12 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Ahsan | Portfolio</title>
 
-<style>
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap');
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    font-family: 'Poppins', sans-serif;
-    background: linear-gradient(135deg, #1f1c2c, #928dab);
-    color: white;
-    transition: 0.4s;
-}
-
-/* NAVBAR */
-nav {
-    position: sticky;
-    top: 0;
-    backdrop-filter: blur(10px);
-    background: rgba(0,0,0,0.3);
-    padding: 15px;
-    text-align: center;
-}
-
-nav a {
-    color: white;
-    margin: 15px;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-/* CONTAINER */
-.container {
-    width: 85%;
-    margin: auto;
-    padding: 20px;
-}
-
-/* GLASS CARD */
-.card {
-    background: rgba(255,255,255,0.1);
-    border-radius: 15px;
-    padding: 20px;
-    margin-top: 20px;
-    backdrop-filter: blur(10px);
-    transition: 0.3s;
-}
-
-.card:hover {
-    transform: translateY(-5px);
-}
-
-/* HEADER */
-.header {
-    display: flex;
-    align-items: center;
-    gap: 30px;
-}
-
-.header img {
-    width: 140px;
-    border-radius: 50%;
-    border: 3px solid white;
-}
-
-h1 {
-    font-size: 28px;
-}
-
-h2 {
-    margin-bottom: 10px;
-}
-
-/* PROJECT */
-.project {
-    margin-bottom: 15px;
-}
-
-.links a {
-    margin-right: 10px;
-    color: #00ffff;
-}
-
-/* BUTTON */
-button {
-    margin-top: 10px;
-    padding: 8px 14px;
-    border: none;
-    border-radius: 5px;
-    background: #00ffff;
-    cursor: pointer;
-}
-
-/* DARK MODE */
-.dark {
-    background: #0f0f0f;
-}
-
-/* ANIMATION */
-.fade {
-    animation: fadeIn 1s ease-in;
-}
-
-@keyframes fadeIn {
-    from {opacity: 0; transform: translateY(20px);}
-    to {opacity: 1; transform: translateY(0);}
-}
-</style>
+<link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
+<!-- NAVBAR -->
 <nav>
     <a href="#projects">Projects</a>
     <a href="#skills">Skills</a>
@@ -129,18 +21,29 @@ button {
 <div class="container">
 
 <!-- HEADER -->
-<div class="card header fade">
-    <img src="My Pic.jpeg">
+<div class="card header">
+    <img src="My Pic.jpeg" alt="Profile">
     <div>
         <h1 id="typing"></h1>
         <p><b>Full-Stack Developer | Cybersecurity Enthusiast</b></p>
-        <p>Building secure, scalable and modern web applications.</p>
-        <a href="resume.pdf" download><button>Download Resume</button></a>
+        <p>
+            Building secure, scalable, and modern web applications.
+        </p>
+
+        <p>
+            <a href="mailto:ahsanabidi200@gmail.com">Email</a> |
+            <a href="https://github.com/Ahsan-Abidi" target="_blank">GitHub</a> |
+            <a href="https://linkedin.com/in/ahsan-abidi-8794512a4/" target="_blank">LinkedIn</a>
+        </p>
+
+        <a href="resume.pdf" download>
+            <button>Download Resume</button>
+        </a>
     </div>
 </div>
 
 <!-- ABOUT -->
-<div class="card fade">
+<div class="card">
 <h2>About Me</h2>
 <p>
 Passionate developer focused on real-world applications and cybersecurity.
@@ -149,33 +52,20 @@ Continuously improving in full-stack development and secure coding practices.
 </div>
 
 <!-- SKILLS -->
-<div class="card fade" id="skills">
+<div class="card" id="skills">
 <h2>Skills</h2>
-<p>
-<img src="https://skillicons.dev/icons?i=html,css,js,react,nodejs,mysql,git" />
-</p>
-</div>
-
-<!-- FEATURED PROJECT -->
-<div class="card fade">
-<h2>🔥 Featured Project</h2>
-<b>Cybersecurity Dashboard</b>
-<p>Full-stack system monitoring dashboard with authentication & security focus.</p>
-<a href="https://github.com/Ahsan-Abidi/IDA-cybersecurity-dashboard.git" target="_blank">View Project</a>
+<img src="https://skillicons.dev/icons?i=html,css,js,react,nodejs,mysql,git">
 </div>
 
 <!-- PROJECTS -->
-<div class="card fade" id="projects">
-<h2>Projects</h2>
-
-<div class="card fade" id="projects">
+<div class="card" id="projects">
 <h2>Projects</h2>
 
 <div class="project-grid">
 
 <div class="project-card">
 <h3>Salon Website</h3>
-<p>Responsive booking system with clean UI and smooth user interaction.</p>
+<p>Responsive booking system with clean UI.</p>
 <p><b>Tech:</b> HTML, CSS, JS</p>
 <a href="https://github.com/Ahsan-Abidi/Salon-Website.git" target="_blank">GitHub</a>
 <a href="https://ahsan-abidi.github.io/Salon-Website/" target="_blank">Live</a>
@@ -183,22 +73,22 @@ Continuously improving in full-stack development and secure coding practices.
 
 <div class="project-card">
 <h3>File Integrity Checker</h3>
-<p>Python tool using SHA-256 hashing to detect unauthorized file changes.</p>
+<p>SHA-256 hashing tool to detect file changes.</p>
 <p><b>Tech:</b> Python</p>
 <a href="https://github.com/Ahsan-Abidi/file-integrity-checker.git" target="_blank">GitHub</a>
 </div>
 
 <div class="project-card">
 <h3>Weather App</h3>
-<p>Real-time weather app with API integration and dynamic UI updates.</p>
-<p><b>Tech:</b> Node.js, API</p>
+<p>Real-time weather app with API integration.</p>
+<p><b>Tech:</b> Node.js</p>
 <a href="https://github.com/Ahsan-Abidi/Weather_Dashboard.git" target="_blank">GitHub</a>
 </div>
 
 <div class="project-card">
 <h3>Cybersecurity Dashboard</h3>
-<p>Full-stack dashboard with authentication, logs, and system monitoring.</p>
-<p><b>Tech:</b> Node.js, Express, MySQL</p>
+<p>Full-stack dashboard with authentication & monitoring.</p>
+<p><b>Tech:</b> Node.js, MySQL</p>
 <a href="https://github.com/Ahsan-Abidi/IDA-cybersecurity-dashboard.git" target="_blank">GitHub</a>
 </div>
 
@@ -206,39 +96,15 @@ Continuously improving in full-stack development and secure coding practices.
 </div>
 
 <!-- CONTACT -->
-<div class="card fade" id="contact">
+<div class="card" id="contact">
 <h2>Contact</h2>
-
-<p>📧 <a href="mailto:ahsanabidi200@gmail.com">ahsanabidi200@gmail.com</a></p>
-
-<p>💻 <a href="https://github.com/Ahsan-Abidi" target="_blank">
-GitHub Profile</a></p>
-
-<p>🔗 <a href="https://linkedin.com/in/ahsan-abidi-8794512a4/" target="_blank">
-LinkedIn Profile</a></p>
+<p>Email: <a href="mailto:ahsanabidi200@gmail.com">ahsanabidi200@gmail.com</a></p>
+<p>GitHub: <a href="https://github.com/Ahsan-Abidi" target="_blank">Profile</a></p>
+<p>LinkedIn: <a href="https://linkedin.com/in/ahsan-abidi-8794512a4/" target="_blank">Profile</a></p>
+</div>
 
 </div>
 
-<script>
-// DARK MODE
-function toggleTheme() {
-    document.body.classList.toggle("dark");
-}
-
-// TYPING EFFECT
-const text = "Syed Mohammer Ahsan Abidi";
-let i = 0;
-
-function typing() {
-    if(i < text.length) {
-        document.getElementById("typing").innerHTML += text.charAt(i);
-        i++;
-        setTimeout(typing, 50);
-    }
-}
-
-typing();
-</script>
-
+<script src="script.js"></script>
 </body>
 </html>
